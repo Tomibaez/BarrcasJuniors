@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Club Atletico Barracas Juniors</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="shortcut icon" href="/img/Logo.ico" type="image/x-icon">
+
+</head>
+<body>
+  <header>
+    <div class="header-container">
+        <img class="logo" src="/img/LOGO BARRACAS 2020 (1).png" alt="">
+        <button class="menu-btn" onclick="toggleMenu()" id="icono-nav">&#9776;</button>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li><a href="#home" onclick="seleccionar()"><i class="bi bi-house-door-fill"></i></a></li>
+                <li><a href="https://www.instagram.com/clubatleticobarracasjuniors/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="https://wa.me/541131047235" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></li> <!-- Cambia el número a tu número de WhatsApp -->
+                <li class="nav-item dropdown">
+                    <a href="#actividades" id="actividadesLink" onclick="seleccionar()">Actividades</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownActividades">
+                        <li><a class="dropdown-item" href="#actividades1">Actividad 1</a></li>
+                        <li><a class="dropdown-item" href="#actividades2">Actividad 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#info" onclick="seleccionar()">Información</a></li>
+                <li><a href="#history" onclick="seleccionar()">Historia</a></li>
+                <li><a href="#contact" onclick="seleccionar()">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<section id="home">
+    <h2>Bienvenidos a Club Atlético Barracas Juniors</h2>
+    <p>El club con más pasión y dedicación en el barrio de Barracas.</p>
+    <div id="carouselExampleIndicators" class="carousel slide slider-box">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+     
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/cancha.jpg" class="d-block w-100" alt="...">
+            <p>Cancha de padel</p>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/parrilla.jpg" class="d-block w-100" alt="...">
+            <p>Parrilla</p>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/salon1.jpg" class="d-block w-100" alt="...">
+            <p>Salon A</p>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/salon2.jpg" class="d-block w-100" alt="...">
+            <p>Salon A</p>
+
+          </div>
+          <div class="carousel-item">
+            <img src="/img/garaje.jpg" class="d-block w-100" alt="...">
+            <p>Garaje</p>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/paredon.jpg" class="d-block w-100" alt="...">
+            <p>Paredon Garaje</p>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/lparedon.jpg" class="d-block w-100" alt="...">
+            <p>Paredon Garaje</p>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/diego.jpg" class="d-block w-100" alt="...">
+            <p>Paredon Garaje</p>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/Buffet.jpg" class="d-block w-100" alt="...">
+            <p>Buffet</p>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+   
+       
+</section>
+<section id="instalaciones">
+  <h2>Nuestras Instalaciones</h2>
+  <p>Descubre nuestras modernas instalaciones diseñadas para ofrecerte la mejor experiencia.</p>
+  <div class="contenedor_instalaciones">
+      <div class="gallery_instalaciones">
+          <figure class="instalaciones__pic">
+              <img src="/img/gym.jpg" class="instalaciones__img" alt="Gimnasio">
+              <div class="instalaciones__overlay">Gimnasio</div>
+          </figure>
+          <figure class="instalaciones__pic">
+              <img src="/img/piscina.jpg" class="instalaciones__img" alt="Piscina">
+              <div class="instalaciones__overlay">Piscina</div>
+          </figure>
+          <figure class="instalaciones__pic">
+              <img src="/img/sauna.jpg" class="instalaciones__img" alt="Sauna">
+              <div class="instalaciones__overlay">Sauna</div>
+          </figure>
+          <!-- Agrega más figuras según sea necesario -->
+      </div>
+  </div>
+</section>
+
+<section id="actividades">
+    <h2>Nuestras Actividades</h2>
+    <p>Ofrecemos una variedad de actividades deportivas y recreativas para todas las edades.</p>
+    <div class="destination">
+        <p class="Excursiones">actividades</p>
+    </div>
+    
+    <section class="contenedor_hoteles" id="hoteles">
+        <div class="gallery_hoteles">
+
+            <figure class="hoteles__pic hoteles__pic--g7">
+              <a href="basquet.html">
+                <img src="/img/BasquetEquipo.jpg" class="hoteles__img" alt="Escuela de básquet">
+                <div class="hoteles__overlay">Escuela de básquet</div>
+            </a>               
+         </figure>
+         
+     
+         <figure class="hoteles__pic hoteles__pic--g8">
+         
+             <img src="/img/futsal femenino.png" class="hoteles__img" alt="Futsal femenino" >
+             <div ><a target="_blank" class="hoteles__overlay" href="/html/futsalFem.html">Futsal femenino</a></div>
+          
+         </figure> 
+         <figure class="hoteles__pic hoteles__pic--g8">
+         
+          <img src="/img/futsal femenino.png" class="hoteles__img" alt="Futsal femenino" >
+          <div ><a target="_blank" class="hoteles__overlay" href="/html/futsalFem.html">Futsal Seniors</a></div>
+       
+      </figure> 
+         <figure class="hoteles__pic hoteles__pic--g8">
+         
+          <img src="/img/folckloreGrupo.jpg" class="hoteles__img" alt="folcklore" >
+          <div ><a target="_blank" class="hoteles__overlay" href="/html/futsalFem.html">folcklore</a></div>
+       
+      </figure>
+
+          
+         <figure class="hoteles__pic hoteles__pic--g9">
+          <a href=""></a>
+              <img src="/img/futsalForm.jpg" class="hoteles__img">
+             <div ><a target="_blank" class="hoteles__overlay" href="">Futsal formativo</a></div>
+         </figure> 
+         
+         <figure class="hoteles__pic hoteles__pic--g10">
+                <img src="/img/handball feminino.png" class="hoteles__img">
+                 <div ><a target="_blank" class="hoteles__overlay" href="/html/handaballFemenino.html">Handaball femenino</a></div>
+             
+         </figure> 
+     
+         <figure class="hoteles__pic hoteles__pic--g11">
+               <img src="/img/taekwondo.png" class="hoteles__img">
+                 <div ><a target="_blank" class="hoteles__overlay" href="">Escuela de taekwondo</a></div>
+             
+         </figure> 
+
+         <figure class="hoteles__pic hoteles__pic--g12">
+                <img src="/img/futbol escuela.png" class="hoteles__img">
+                 <div ><a target="_blank" class="hoteles__overlay" href="">Escuela de futbol</a></div>
+             
+         </figure>
+         <figure class="hoteles__pic hoteles__pic--g12">
+          <img src="/img/Taller.jpg" class="hoteles__img">
+           <div ><a target="_blank" class="hoteles__overlay" href="">Taller de arte</a></div>
+       
+          </figure>
+          <figure class="hoteles__pic hoteles__pic--g12">
+            <img src="/img/Yoga.jpg" class="hoteles__img">
+             <div ><a target="_blank" class="hoteles__overlay" href="">Yoga</a></div>
+         
+     </figure>
+     <figure class="hoteles__pic hoteles__pic--g12">
+      <img src="/img/BaileUrbano.jpg" class="hoteles__img">
+       <div ><a target="_blank" class="hoteles__overlay" href="">Baile urbano</a></div>   
+    </figure>
+
+    
+<figure class="hoteles__pic hoteles__pic--g12">
+  <img src="/img/aikido.jpg" class="hoteles__img">
+   <div ><a target="_blank" class="hoteles__overlay" href="">Aikido</a></div>
+
+</figure>
+        </div>
+    </section>
+</section>
+
+<section id="info">
+    <h2>Información</h2>
+    <p>Aquí encontrarás toda la información relevante sobre nuestro club y sus servicios.</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.287516361841!2d-58.37630462452237!3d-34.64744115980816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb53026591cf%3A0x9f47d92d1c26611f!2sClub%20Atl%C3%A9tico%20Barracas%20Juniors!5e0!3m2!1ses!2sar!4v1721326569408!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<section id="history">
+  <h2>Nuestra Historia</h2>
+  <p>Desde nuestra fundación en 1920, hemos sido un pilar en la comunidad de Barracas.</p>
+    <br><br>
+      <strong>Capítulo I: EL PAÍS Y EL BARRIO EN 1912</strong><br><p>En memoria de Luis Amo; Dante González, Daniel "loco" González y Daniel "flauta" Martinez.<br><br>
+      
+
+      Los sucesos que acaparaban la opinión pública en ese año eran la huelga ferroviaria, que había paralizado el país; el rompimiento de relaciones con Paraguay y el descubri- miento de las tenebrosas actividades de la mafia en Rosario.
+      
+      También ese año marcó el derrumbamiento de la famosísima piedra movediza, que entristeció a toda la localidad de Tandil que la tenía por símbolo e icono turístico.
+      
+      Se hablaba además de la proeza de Teodoro Fels quien había cruzado a fines del año anterior ida y vuelta el Río de la Plata uniendo Buenos Aires con Montevideo.
+      
+      El mundo político se aprestaba a ensayar por primera vez las elecciones generales bajo la ley Sáenz Peña con el sistema de lista incompleta; registrándose sangrientos episodios en la provincia de Córdoba.
+      
+      Otros sucesos absorberían también la atención pública como la llegada de Amundsen, el explorador de la Antártico, los crímenes del tristemente célebre "Petiso Orejudo" y finalmente, durante el mes de abril, el trágico hundimiento del transatlántico Titanic que conmovería al mundo entero.</p>
+      <br><figure class="chapter-figure">
+        <img src="/img/La barranca.jpg" alt="Descripción de la imagen" class="chapter-image">
+        <figcaption class="image-caption">La barranca de la larga calle</figcaption>
+      </figure><br>Y ya en nuestro barrio, podemos mencionar que en 1912 el Perito Francisco Pascasio Moreno, como Presidente del Consejo Escolar V decidió introducir el movimiento Scout en los colegios de Barracas, formándose en ese año la 3ra. Compañía de Barracas (hoy Tercera Compañía Scout Coronel Pringles).
+
+      El renombrado paisajista Carlos Thays diseña el trazado de la actual Plaza España, lindera a los Hospitales y el Asilo de Ancianos Guillermo Rawson.
+      
+      También es el año en que el ilustre residente del barrio Agustin Bardi, compone su primer tango, "Vicentito".
+      
+      Por último y ya en el ámbito deportivo, digamos que fue campeón del torneo de 1912 por la Asociación Argentina de Football el equipo de Quilmas Athletic Club y por la Fe- deración Argentina de Football el equipo de Estudiantil Porteño.<br>
+      <figure class="chapter-figure"></figure>
+        <img src="/" alt="Descripción de la imagen" class="chapter-image">
+        <figcaption class="image-caption">La barranca de la larga calle</figcaption>
+      </figure><br>
+      
+      <strong>Capítulo 2: La Expansión</strong><br>
+      Con el paso del tiempo, nuestro club creció, y con él, nuestras instalaciones. Desde los primeros torneos locales hasta competencias internacionales, hemos sido parte de momentos inolvidables.
+      Las paredes de nuestro club son testigos de hazañas deportivas, de encuentros de amistad, y de sueños realizados.
+      <br><br>
+      <strong>Capítulo 3: El Futuro</strong><br>
+      Hoy, miramos hacia el futuro con optimismo, orgullosos de nuestro legado y decididos a continuar escribiendo nuevas historias. Sabemos que el deporte une, inspira y transforma, y eso es lo que queremos seguir ofreciendo a las nuevas generaciones.
+  
+</section>
+
+
+    
+<section id="contact">
+  <h2>Contacto</h2>
+  <p>Por cualquier otra consulta, contáctenos por WhatsApp al:</p>
+  <p>
+      <a href="https://wa.me/541131047235" target="_blank" aria-label="WhatsApp">
+          <i class="bi bi-whatsapp"></i> +54 11 3104-7235
+      </a>
+  </p>
+</section>
+
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-content">
+          <p>&copy; 2024 Club Atlético Barracas Juniors. Todos los derechos reservados.</p>
+          <div class="social-icons">
+              <a href="https://www.instagram.com/clubatleticobarracasjuniors/" target="_blank" aria-label="Instagram">
+                  <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://wa.me/541131047235" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a> <!-- Cambia el número a tu número de WhatsApp -->
+          </div>
+      </div>
+  </div>
+</footer>
+
+<script src="/js/scrip.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>   
+</html>

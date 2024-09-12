@@ -1,0 +1,351 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: url('/img/fondo.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 50px;
+}
+.carousel-item p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  
+.logo {
+    max-width: 6rem;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+header .header-container .logo {
+    margin-right: auto;
+}
+
+nav {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #24176a;
+    border-radius: 5px;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+.menu-btn:focus {
+    outline: none;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact form label, #contact form input, #contact form textarea {
+    width: 100%;
+    max-width: 500px;
+    margin: 0.5rem 0;
+}
+
+#contact form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background-color: #7c7b7b;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #1e00cc;
+}
+
+.slider-box {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*==== Actividades ======*/
+.contenedor_hoteles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery_hoteles {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las imágenes se ajusten en filas si el espacio es insuficiente */
+    justify-content: space-between; /* Espacio entre las imágenes */
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+.hoteles__pic {
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    flex: 1 1 calc(33.333% - 20px); /* Permitir que las imágenes se ajusten automáticamente al ancho del contenedor */
+    max-width: calc(33.333% - 20px); /* Ancho máximo de 3 imágenes por fila */
+    height: 250px; /* Altura fija para las imágenes */
+}
+
+.hoteles__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 18, 18, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hoteles__pic:hover .hoteles__overlay {
+    opacity: 1;
+}
+
+.hoteles__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Asegura que la imagen no se recorte y mantenga su proporción */
+    border-radius: 5px;
+    border: none; /* Eliminar el borde azul */
+
+}
+.chapter-figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-caption {
+    font-size: 1.2rem; /* Tamaño de fuente mayor */
+    font-weight: bold; /* Negrita */
+    color: #ffffff; /* Color diferente */
+    margin-top: 10px; /* Separación entre la imagen y el texto */
+    text-transform: uppercase; /* Convertir todo el texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+.chapter-image {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .gallery_hoteles {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    #contact form label, #contact form input, #contact form textarea {
+        max-width: 100%;
+    }
+
+    .slider-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 4rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .slider-box {
+        width: 100%;
+    }
+
+    .gallery_hoteles {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    .menu-btn {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+    }
+  
+}
+.map-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.admin-hours {
+    margin-top: 20px;
+}
+
+.admin-hours h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.admin-hours ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-hours li {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
