@@ -3,37 +3,37 @@ function toggleMenu() {
     menu.classList.toggle('show');
 }
 document.addEventListener('DOMContentLoaded', function() {
-    const dropdownToggle = document.getElementById('dropdownActividades');
-    const dropdownMenu = document.querySelector('.nav-item .dropdown-menu');
+  // Selector de instalaciones
+  const buttons = document.querySelectorAll('.deporte-selector button');
+  const pictures = document.querySelectorAll('.gallery_instalaciones .instalaciones__pic');
 
-    dropdownToggle.addEventListener('click', function(event) {
-        event.preventDefault();
-        dropdownMenu.classList.toggle('show');
+  if (buttons.length > 0 && pictures.length > 0) {
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remover la clase active de todos los botones
+        buttons.forEach(btn => btn.classList.remove('active'));
+        // Añadir la clase active al botón clickeado
+        this.classList.add('active');
+
+        // Obtener el deporte seleccionado
+        const deporte = this.getAttribute('data-deporte');
+
+        // Mostrar las imágenes correspondientes
+        pictures.forEach(pic => {
+          if (pic.classList.contains(`deporte-${deporte}`)) {
+            pic.classList.remove('hidden');
+          } else {
+            pic.classList.add('hidden');
+          }
+        });
+      });
     });
+  } else {
+    console.log("No se encontraron botones o imágenes para la galería de instalaciones.");
+  }
 });
-const buttons = document.querySelectorAll('.deporte-selector button');
-const pictures = document.querySelectorAll('.gallery_instalaciones .instalaciones__pic');
 
-buttons.forEach(button => {
-  button.addEventListener('click', function() {
-    // Remover la clase active de todos los botones
-    buttons.forEach(btn => btn.classList.remove('active'));
-    // Añadir la clase active al botón clickeado
-    this.classList.add('active');
 
-    // Obtener el deporte seleccionado
-    const deporte = this.getAttribute('data-deporte');
-
-    // Mostrar las imágenes correspondientes
-    pictures.forEach(pic => {
-      if (pic.classList.contains(`deporte-${deporte}`)) {
-        pic.classList.remove('hidden');
-      } else {
-        pic.classList.add('hidden');
-      }
-    });
-  });
-});
 
 // function toggleMenu() {
 //     const nav = document.querySelector('nav');

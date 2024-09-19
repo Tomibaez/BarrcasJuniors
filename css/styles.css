@@ -275,18 +275,26 @@ footer {
 }
 
 #history p {
-    font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand", sans-serif;
     text-align: justify;
     font-size: 1.1rem;
 }
 
 #history h3 {
-    font-family: "Quicksand", sans-serif; /* Aplicar fuente Quicksand a los h3 */
+    font-family: "Roboto", sans-serif;/* Aplicar fuente Quicksand a los h3 */
     font-weight: bold;
     font-size: 1.3rem;
     margin: 1rem 0;
     color: #ffffff;
 }
+#history h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: normal; /* Elimina la negrita */
+    font-size: 1.1rem; /* Tamaño de letra más pequeño */
+    margin: 1rem 0;
+    color: #ffffff;
+}
+
 
 .chapter-figure {
     margin: 1.5rem 0;
@@ -317,7 +325,28 @@ footer {
     font-size: 2em;
     margin-bottom: 20px;
 }
+iframe{
+    
+    width: 600px;
+    height: 480px;
 
+}
+.container-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    
+}
+#info{
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 #instalaciones p {
     text-align: center;
     font-size: 1.2em;
@@ -378,31 +407,31 @@ footer {
     color: #fff;
 }
 
-/* Estilos para el mapa */
-.mapa-container {
-    width: 100%;
-    max-width: 1000px; /* Ajusta según tu preferencia */
-    margin: 0 auto; /* Centra el contenedor */
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid transparent;
-}
 
-.mapa {
-    width: 100%;
-    height: 450px; /* Establece una altura fija */
-    border: 0;
-}
 
 /* Responsivo: ajusta el tamaño del mapa en pantallas más pequeñas */
-@media (max-width: 768px) {
-    .mapa {
-        height: 300px; /* Reduce la altura en pantallas más pequeñas */
-    }
-}
+
 
 /* Responsividad para elementos generales */
 @media (max-width: 768px) {
+    iframe{
+       
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    #info{
+        position: relative;
+        min-height: 100px;
+        display: flex;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
     .nav-list {
         flex-direction: column;
         align-items: flex-start;
@@ -442,6 +471,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+
     .gallery_instalaciones {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
