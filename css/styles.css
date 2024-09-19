@@ -1,4 +1,5 @@
 /* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +22,7 @@ body {
     font-size: 40px;
     padding-top: 50px;
 }
+
 .carousel-item p {
     position: absolute;
     bottom: 20px;
@@ -30,8 +32,8 @@ body {
     padding: 10px;
     border-radius: 5px;
     font-size: 1.2rem;
-  }
-  
+}
+
 .logo {
     max-width: 6rem;
 }
@@ -88,16 +90,15 @@ nav ul li a:hover {
 }
 
 .menu-btn {
-    display: none;
-    font-size: 1.5rem;
     background: none;
     border: none;
-    color: #fff;
-    
+    font-size: 24px;
+    color: white; /* Color de las líneas del ícono */
     cursor: pointer;
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
+}
+
+.menu-btn:hover {
+    color: lightgray; /* Cambia de color al hacer hover */
 }
 
 .menu-btn:focus {
@@ -190,162 +191,258 @@ footer {
 }
 
 /*==== Actividades ======*/
-.contenedor_hoteles {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.activities-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.gallery_hoteles {
+.activity-link {
     display: flex;
-    flex-wrap: wrap; /* Permitir que las imágenes se ajusten en filas si el espacio es insuficiente */
-    justify-content: space-between; /* Espacio entre las imágenes */
-    gap: 20px; /* Espacio entre las imágenes */
-}
-
-.hoteles__pic {
+    flex-direction: column;
+    text-decoration: none;
     position: relative;
-    cursor: pointer;
-    border-radius: 5px;
-    flex: 1 1 calc(33.333% - 20px); /* Permitir que las imágenes se ajusten automáticamente al ancho del contenedor */
-    max-width: calc(33.333% - 20px); /* Ancho máximo de 3 imágenes por fila */
-    height: 250px; /* Altura fija para las imágenes */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra horizontalmente */
 }
 
-.hoteles__overlay {
+.activity-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.vertical {
+    aspect-ratio: 4 / 4;
+}
+
+.horizontal {
+    aspect-ratio: 12 / 6;
+}
+
+.activity-title {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(12, 18, 18, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
     color: white;
+    font-size: 1.5em;
+    font-weight: bold;
     opacity: 0;
-    transition: opacity 0.5s;
-    border-radius: 5px;
-    text-decoration: none;
+    transition: opacity 0.3s ease;
 }
 
-.hoteles__pic:hover .hoteles__overlay {
+.activity-link:hover .activity-title {
     opacity: 1;
 }
 
-.hoteles__img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Asegura que la imagen no se recorte y mantenga su proporción */
-    border-radius: 5px;
-    border: none; /* Eliminar el borde azul */
-
-}
-.chapter-figure {
+.activity-name {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-top: 10px;
+    font-weight: bold;
     text-align: center;
-    margin: 20px 0;
+    transition: opacity 0.3s ease;
 }
 
-.image-caption {
-    font-size: 1.2rem; /* Tamaño de fuente mayor */
-    font-weight: bold; /* Negrita */
-    color: #ffffff; /* Color diferente */
-    margin-top: 10px; /* Separación entre la imagen y el texto */
-    text-transform: uppercase; /* Convertir todo el texto a mayúsculas */
-    letter-spacing: 1px; /* Espaciado entre letras */
+.activity-link:hover .activity-name {
+    opacity: 0;
+}
+
+/* Estilos específicos de la sección de Historia */
+#history {
+    margin: 2rem auto;
+    max-width: 800px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+#history h2 {
+    font-size: 2rem;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #fbfbfb; /* Color dorado para resaltar */
+}
+
+#history p {
+    font-family: "Quicksand", sans-serif;
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
+#history h3 {
+    font-family: "Quicksand", sans-serif; /* Aplicar fuente Quicksand a los h3 */
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    color: #ffffff;
+}
+
+.chapter-figure {
+    margin: 1.5rem 0;
+    text-align: center;
 }
 
 .chapter-image {
-    display: block;
-    margin: 0 auto;
     width: 100%;
-    max-width: 800px;
     height: auto;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .gallery_hoteles {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
-    #contact form label, #contact form input, #contact form textarea {
-        max-width: 100%;
-    }
-
-    .slider-box {
-        width: 100%;
-    }
+.image-caption {
+    font-style: italic;
+    color: #ddd;
+    margin-top: 0.5rem;
 }
 
-@media (max-width: 768px) {
-    .logo {
-        max-width: 4rem;
-    }
+/* ===== Fin de Estilos para Historia ===== */
+/* Estilos generales para las instalaciones */
+#instalaciones {
+    padding: 20px;
 
-    nav ul {
-        flex-direction: column;
-        display: none;
-        width: 100%;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .slider-box {
-        width: 100%;
-    }
-
-    .gallery_hoteles {
-        grid-template-columns: 1fr;
-    }
-
-    section {
-        padding: 1rem;
-    }
-
-    .menu-btn {
-        display: block;
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-    }
-  
 }
-.map-container {
-    margin: 20px 0;
-    display: flex;
+
+#instalaciones h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#instalaciones p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de la galería */
+.gallery_instalaciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
     justify-content: center;
 }
 
-.admin-hours {
-    margin-top: 20px;
+.instalaciones__pic {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.admin-hours h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.instalaciones__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-.admin-hours ul {
-    list-style: none;
-    padding: 0;
+.instalaciones__pic:hover .instalaciones__img {
+    transform: scale(1.05); /* Efecto zoom al pasar el cursor */
 }
 
-.admin-hours li {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+.instalaciones__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 0 0 10px 10px;
 }
 
+.instalaciones__pic:hover .instalaciones__overlay {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.deporte-selector button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Estilos para el mapa */
+.mapa-container {
+    width: 100%;
+    max-width: 1000px; /* Ajusta según tu preferencia */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.mapa {
+    width: 100%;
+    height: 450px; /* Establece una altura fija */
+    border: 0;
+}
+
+/* Responsivo: ajusta el tamaño del mapa en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .mapa {
+        height: 300px; /* Reduce la altura en pantallas más pequeñas */
+    }
+}
+
+/* Responsividad para elementos generales */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none; /* Oculto por defecto en pantallas pequeñas */
+    }
+
+    .menu-btn {
+        display: block; /* Mostrar el ícono de menú hamburguesa */
+    }
+
+    .menu-btn.active + .nav-list {
+        display: flex; /* Mostrar el menú cuando se hace clic en el botón */
+    }
+
+    /* Ajustes para las imágenes del carrusel en pantallas pequeñas */
+    .carousel-inner img {
+        max-height: 300px; /* Limitar la altura de las imágenes en pantallas móviles */
+        object-fit: cover; /* Para que las imágenes se ajusten sin deformarse */
+    }
+}
+
+@media (max-width: 768px) {
+    .hoteles__img {
+        width: 100%;
+        height: auto; /* Permite que las imágenes se mantengan completas sin recortarse */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery_instalaciones {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .instalaciones__overlay {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery_instalaciones {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}

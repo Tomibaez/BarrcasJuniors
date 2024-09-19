@@ -14,27 +14,20 @@
   <header>
     <div class="header-container">
         <img class="logo" src="/img/LOGO BARRACAS 2020 (1).png" alt="">
-        <button class="menu-btn" onclick="toggleMenu()" id="icono-nav">&#9776;</button>
+        <button class="menu-btn" onclick="toggleMenu()" class="nav-responsive" id="icono-nav">&#9776;</button>
         <nav class="nav" id="nav">
             <ul class="nav-list">
-                <li><a href="#home" onclick="seleccionar()"><i class="bi bi-house-door-fill"></i></a></li>
-                <li><a href="https://www.instagram.com/clubatleticobarracasjuniors/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
-                <li><a href="https://wa.me/541131047235" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></li> <!-- Cambia el número a tu número de WhatsApp -->
+                <li><a href="/html/inico.html#home" onclick="seleccionar()"><i class="bi bi-house-door-fill"></i></a></li>
                 <li class="nav-item dropdown">
-                    <a href="#actividades" id="actividadesLink" onclick="seleccionar()">Actividades</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownActividades">
-                        <li><a class="dropdown-item" href="#actividades1">Actividad 1</a></li>
-                        <li><a class="dropdown-item" href="#actividades2">Actividad 2</a></li>
-                    </ul>
+                    <a href="/html/inico.html#actividades" id="actividadesLink" onclick="seleccionar()">Actividades</a>
                 </li>
-                <li><a href="#info" onclick="seleccionar()">Información</a></li>
-                <li><a href="#history" onclick="seleccionar()">Historia</a></li>
-                <li><a href="#contact" onclick="seleccionar()">Contacto</a></li>
+                <li><a href="/html/inico.html#info" onclick="seleccionar()">Información</a></li>
+                <li><a href="/html/inico.html#history" onclick="seleccionar()">Historia</a></li>
+                <li><a href="/html/inico.html#contact" onclick="seleccionar()">Contacto</a></li>
             </ul>
         </nav>
     </div>
 </header>
-
 
 <section id="home">
     <h2>Bienvenidos a Club Atlético Barracas Juniors</h2>
@@ -108,125 +101,130 @@
 <section id="instalaciones">
   <h2>Nuestras Instalaciones</h2>
   <p>Descubre nuestras modernas instalaciones diseñadas para ofrecerte la mejor experiencia.</p>
+
+  <!-- Selector de deporte -->
+  <div class="deporte-selector">
+    <button data-deporte="gimnasio" class="active">Cancha Principal</button>
+    <button data-deporte="piscina">Gimnasio PB</button>
+    <button data-deporte="sauna">Gimnasio 1er Piso</button>
+    <button data-deporte="CanchadeTenis">Cancha de Tenis</button>
+    <!-- Agrega más botones para otros deportes -->
+  </div>
+
   <div class="contenedor_instalaciones">
-      <div class="gallery_instalaciones">
-          <figure class="instalaciones__pic">
-              <img src="/img/gym.jpg" class="instalaciones__img" alt="Gimnasio">
-              <div class="instalaciones__overlay">Gimnasio</div>
-          </figure>
-          <figure class="instalaciones__pic">
-              <img src="/img/piscina.jpg" class="instalaciones__img" alt="Piscina">
-              <div class="instalaciones__overlay">Piscina</div>
-          </figure>
-          <figure class="instalaciones__pic">
-              <img src="/img/sauna.jpg" class="instalaciones__img" alt="Sauna">
-              <div class="instalaciones__overlay">Sauna</div>
-          </figure>
-          <!-- Agrega más figuras según sea necesario -->
-      </div>
+    <div class="gallery_instalaciones">
+      <!-- Galería de Gimnasio -->
+      <figure class="instalaciones__pic deporte-gimnasio">
+        <img src="/img/Basquet.jpg" class="instalaciones__img" alt="">
+        <div class="instalaciones__overlay">Cancha de Basquet</div>
+      </figure>
+      <figure class="instalaciones__pic deporte-gimnasio">
+        <img src="/img/primerab.jpg" class="instalaciones__img" alt="">
+        <div class="instalaciones__overlay">Cancha de Basquet</div>
+      </figure>
+
+      <!-- Galería de Piscina -->
+      <figure class="instalaciones__pic deporte-piscina hidden">
+        <img src="/img/GimnasioPb.jpg" class="instalaciones__img" alt="Piscina">
+        <div class="instalaciones__overlay">Gimnasio PB</div>
+      </figure>
+      <figure class="instalaciones__pic deporte-piscina hidden">
+        <img src="/img/GimnasoPb2.jpg" class="instalaciones__img" alt="">
+        <div class="instalaciones__overlay">Gimnasio PB</div>
+      </figure>
+
+      <!-- Galería de Sauna -->
+      <figure class="instalaciones__pic deporte-sauna hidden">
+        <img src="/img/PrimerPiso.jpg" class="instalaciones__img" alt="">
+        <div class="instalaciones__overlay">Tercer Piso</div>
+      </figure>
+      <figure class="instalaciones__pic deporte-sauna hidden">
+        <img src="/img/PrimerPisoSegunda.jpg" class="instalaciones__img" alt="">
+        <div class="instalaciones__overlay">Tercer Piso</div>
+      </figure>
+      <figure class="instalaciones__pic deporte-sauna hidden">
+        <img src="/img/CanchaTenis1 (2).jpg" class="instalaciones__img" alt="">
+        <div class="instalaciones__overlay">Cancha de Tenis</div>
+      </figure>
+      <figure class="instalaciones__pic deporte-sauna hidden">
+        <img src="/img/CanchaDeTenis2.jpg" class="instalaciones__img" alt="">
+        <div class="instalaciones__overlay">Cancha de Tenis</div>
+      </figure>
+    </div>
   </div>
 </section>
 
+
 <section id="actividades">
-    <h2>Nuestras Actividades</h2>
-    <p>Ofrecemos una variedad de actividades deportivas y recreativas para todas las edades.</p>
-    <div class="destination">
-        <p class="Excursiones">actividades</p>
-    </div>
-    
-    <section class="contenedor_hoteles" id="hoteles">
-        <div class="gallery_hoteles">
-
-            <figure class="hoteles__pic hoteles__pic--g7">
-              <a href="basquet.html">
-                <img src="/img/BasquetEquipo.jpg" class="hoteles__img" alt="Escuela de básquet">
-                <div class="hoteles__overlay">Escuela de básquet</div>
-            </a>               
-         </figure>
-         
-     
-         <figure class="hoteles__pic hoteles__pic--g8">
-         
-             <img src="/img/futsal femenino.png" class="hoteles__img" alt="Futsal femenino" >
-             <div ><a target="_blank" class="hoteles__overlay" href="/html/futsalFem.html">Futsal femenino</a></div>
-          
-         </figure> 
-         <figure class="hoteles__pic hoteles__pic--g8">
-         
-          <img src="" class="hoteles__img" alt="Futsal femenino" >
-          <div ><a target="_blank" class="hoteles__overlay" href="/html/futsalFem.html">Futsal Seniors</a></div>
-       
-      </figure> 
-         <figure class="hoteles__pic hoteles__pic--g8">
-         
-          <img src="/img/folckloreGrupo.jpg" class="hoteles__img" alt="folcklore" >
-          <div ><a target="_blank" class="hoteles__overlay" href="/html/futsalFem.html">folcklore</a></div>
-       
-      </figure>
-
-          
-         <figure class="hoteles__pic hoteles__pic--g9">
-          <a href=""></a>
-              <img src="/img/futsalForm.jpg" class="hoteles__img">
-             <div ><a target="_blank" class="hoteles__overlay" href="">Futsal formativo</a></div>
-         </figure> 
-         
-         <figure class="hoteles__pic hoteles__pic--g10">
-                <img src="/img/handball feminino.png" class="hoteles__img">
-                 <div ><a target="_blank" class="hoteles__overlay" href="/html/handaballFemenino.html">Handaball femenino</a></div>
-             
-         </figure> 
-     
-         <figure class="hoteles__pic hoteles__pic--g11">
-               <img src="/img/taekwondo.png" class="hoteles__img">
-                 <div ><a target="_blank" class="hoteles__overlay" href="">Escuela de taekwondo</a></div>
-             
-         </figure> 
-
-         <figure class="hoteles__pic hoteles__pic--g12">
-                <img src="/img/futbol escuela.png" class="hoteles__img">
-                 <div ><a target="_blank" class="hoteles__overlay" href="">Escuelita De Futbol</a></div>
-             
-         </figure>
-         <figure class="hoteles__pic hoteles__pic--g12">
-          <img src="/img/Taller.jpg" class="hoteles__img">
-           <div ><a target="_blank" class="hoteles__overlay" href="">Taller De Arte</a></div>
-       
-          </figure>
-          <figure class="hoteles__pic hoteles__pic--g12">
-            <img src="/img/Yoga.jpg" class="hoteles__img">
-             <div ><a target="_blank" class="hoteles__overlay" href="">Yoga</a></div>
-         
-     </figure>
-     <figure class="hoteles__pic hoteles__pic--g12">
-      <img src="/img/BaileUrbano.jpg" class="hoteles__img">
-       <div ><a target="_blank" class="hoteles__overlay" href="">Baile urbano</a></div>   
-    </figure>
-
-    
-<figure class="hoteles__pic hoteles__pic--g12">
-  <img src="/img/aikido.jpg" class="hoteles__img">
-   <div ><a target="_blank" class="hoteles__overlay" href="">Aikido</a></div>
-
-</figure>
-        </div>
-    </section>
+  <h2>Nuestras Actividades</h2>
+  <p>Ofrecemos una variedad de actividades deportivas y recreativas para todas las edades.</p>
+  <div class="activities-container">
+    <a href="actividad1.html" class="activity-link">
+      <img src="/img/BasquetEquipo.jpg" alt="Descripción de la actividad" class="activity-image horizontal">
+      <p class="activity-name">Escuelita De Basquet</p>
+      <div class="activity-title">Escuelita De Basquet</div>
+    </a>
+    <a href="actividad2.html" class="activity-link">
+      <img src="/img/BaileUrbano.jpg" alt="Descripción de la actividad" class="activity-image vertical">
+      <p class="activity-name">Baile Urbano</p>
+      <div class="activity-title">Baile Urbano</div>
+    </a>
+    <a href="actividad3.html" class="activity-link">
+      <img src="/img/aikidoEquipo.jpg" alt="Descripción de la actividad" class="activity-image vertical">
+      <p class="activity-name">Aikido</p>
+      <div class="activity-title">Aikido</div>
+    </a>
+    <a href="actividad4.html" class="activity-link">
+      <img src="/img/futbol escuela.png" alt="Descripción de la actividad" class="activity-image vertical">
+      <p class="activity-name">Escuelita De Futbol</p>
+      <div class="activity-title">Escuelita De Futbol</div>
+    </a>
+    <a href="actividad5.html" class="activity-link">
+      <img src="/img/folckloreGrupo.jpg" alt="Descripción de la actividad" class="activity-image vertical">
+      <p class="activity-name">Folcklore</p>
+      <div class="activity-title">Folcklore</div>
+    </a>
+    <a href="actividad6.html" class="activity-link">
+      <img src="/img/futbolFemeninoEquipo.jpg" alt="Descripción de la actividad" class="activity-image vertical">
+      <p class="activity-name">Futsal Femenino</p>
+      <div class="activity-title">Futsal Femenino</div>
+    </a>
+    <a href="actividad7.html" class="activity-link">
+      <img src="/img/taekwondo.png" alt="Descripción de la actividad" class="activity-image horizontal">
+      <p class="activity-name">Taekwondo</p>
+      <div class="activity-title">Taekwondo</div>
+    </a>
+    <a href="actividad8.html" class="activity-link">
+      <img src="/img/futsalForm.jpg" alt="Descripción de la actividad" class="activity-image horizontal">
+      <p class="activity-name">Futsal Formativo</p>
+      <div class="activity-title">Futsal Formativo</div>
+    </a>
+    <a href="actividad9.html" class="activity-link">
+      <img src="/img/tallerDeArte.jpeg" alt="Descripción de la actividad" class="activity-image horizontal">
+      <p class="activity-name">Taller De Arte</p>
+      <div class="activity-title">Taller De Arte</div>
+    </a>
+    <a href="actividad9.html" class="activity-link">
+      <img src="/img/FutsalSeniorsEquipo.jpg" alt="Descripción de la actividad" class="activity-image horizontal">
+      <p class="activity-name">Futsal Seniors</p>
+      <div class="activity-title">Futsal Seniors</div>
+    </a>
+  </div>
 </section>
-
 <section id="info">
-    <h2>Información</h2>
-    <p>Aquí encontrarás toda la información relevante sobre nuestro club y sus servicios.</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.287516361841!2d-58.37630462452237!3d-34.64744115980816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb53026591cf%3A0x9f47d92d1c26611f!2sClub%20Atl%C3%A9tico%20Barracas%20Juniors!5e0!3m2!1ses!2sar!4v1721326569408!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <h2>Información</h2>
+  <p>Aquí encontrarás toda la información relevante sobre nuestro club y sus servicios.</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.287516361841!2d-58.37630462452237!3d-34.64744115980816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb53026591cf%3A0x9f47d92d1c26611f!2sClub%20Atl%C3%A9tico%20Barracas%20Juniors!5e0!3m2!1ses!2sar!4v1721326569408!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 
 <section id="history">
   <h2>Nuestra Historia</h2>
   <p>Desde nuestra fundación en 1920, hemos sido un pilar en la comunidad de Barracas.</p>
     <br><br>
-      <strong>Capítulo I: EL PAÍS Y EL BARRIO EN 1912</strong><br><p>En memoria de Luis Amo; Dante González, Daniel "loco" González y Daniel "flauta" Martinez.<br><br>
+      <strong><h3>Capítulo I: EL PAÍS Y EL BARRIO EN 1912</h3></strong><br><br><br><p>En memoria de Luis Amo; Dante González, Daniel "loco" González y Daniel "flauta" Martinez.</p><br><br>
       
 
-      Los sucesos que acaparaban la opinión pública en ese año eran la huelga ferroviaria, que había paralizado el país; el rompimiento de relaciones con Paraguay y el descubri- miento de las tenebrosas actividades de la mafia en Rosario.
+      <h3>Los sucesos que acaparaban la opinión pública en ese año eran la huelga ferroviaria, que había paralizado el país; el rompimiento de relaciones con Paraguay y el descubri- miento de las tenebrosas actividades de la mafia en Rosario.
       
       También ese año marcó el derrumbamiento de la famosísima piedra movediza, que entristeció a toda la localidad de Tandil que la tenía por símbolo e icono turístico.
       
@@ -234,17 +232,17 @@
       
       El mundo político se aprestaba a ensayar por primera vez las elecciones generales bajo la ley Sáenz Peña con el sistema de lista incompleta; registrándose sangrientos episodios en la provincia de Córdoba.
       
-      Otros sucesos absorberían también la atención pública como la llegada de Amundsen, el explorador de la Antártico, los crímenes del tristemente célebre "Petiso Orejudo" y finalmente, durante el mes de abril, el trágico hundimiento del transatlántico Titanic que conmovería al mundo entero.</p>
+      Otros sucesos absorberían también la atención pública como la llegada de Amundsen, el explorador de la Antártico, los crímenes del tristemente célebre "Petiso Orejudo" y finalmente, durante el mes de abril, el trágico hundimiento del transatlántico Titanic que conmovería al mundo entero.</h3>
       <br><figure class="chapter-figure">
         <img src="/img/La barranca.jpg" alt="Descripción de la imagen" class="chapter-image">
-        <figcaption class="image-caption">La barranca de la larga calle</figcaption>
-      </figure><br>Y ya en nuestro barrio, podemos mencionar que en 1912 el Perito Francisco Pascasio Moreno, como Presidente del Consejo Escolar V decidió introducir el movimiento Scout en los colegios de Barracas, formándose en ese año la 3ra. Compañía de Barracas (hoy Tercera Compañía Scout Coronel Pringles).
+        <figcaption class="image-caption"><h3>"La barranca de la calle larga"</h3></figcaption>
+      </figure><br><p>Y ya en nuestro barrio, podemos mencionar que en 1912 el Perito Francisco Pascasio Moreno, como Presidente del Consejo Escolar V decidió introducir el movimiento Scout en los colegios de Barracas, formándose en ese año la 3ra. Compañía de Barracas (hoy Tercera Compañía Scout Coronel Pringles).
 
       El renombrado paisajista Carlos Thays diseña el trazado de la actual Plaza España, lindera a los Hospitales y el Asilo de Ancianos Guillermo Rawson.
       
       También es el año en que el ilustre residente del barrio Agustin Bardi, compone su primer tango, "Vicentito".
       
-      Por último y ya en el ámbito deportivo, digamos que fue campeón del torneo de 1912 por la Asociación Argentina de Football el equipo de Quilmas Athletic Club y por la Fe- deración Argentina de Football el equipo de Estudiantil Porteño.<br>
+      Por último y ya en el ámbito deportivo, digamos que fue campeón del torneo de 1912 por la Asociación Argentina de Football el equipo de Quilmas Athletic Club y por la Fe- deración Argentina de Football el equipo de Estudiantil Porteño.</p><br>
       <figure class="chapter-figure"></figure>
         <img src="/" alt="Descripción de la imagen" class="chapter-image">
         <figcaption class="image-caption">La barranca de la larga calle</figcaption>
@@ -285,9 +283,9 @@
       </div>
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <script src="/js/scrip.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>   
 </html>

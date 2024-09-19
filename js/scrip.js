@@ -11,6 +11,29 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownMenu.classList.toggle('show');
     });
 });
+const buttons = document.querySelectorAll('.deporte-selector button');
+const pictures = document.querySelectorAll('.gallery_instalaciones .instalaciones__pic');
+
+buttons.forEach(button => {
+  button.addEventListener('click', function() {
+    // Remover la clase active de todos los botones
+    buttons.forEach(btn => btn.classList.remove('active'));
+    // Añadir la clase active al botón clickeado
+    this.classList.add('active');
+
+    // Obtener el deporte seleccionado
+    const deporte = this.getAttribute('data-deporte');
+
+    // Mostrar las imágenes correspondientes
+    pictures.forEach(pic => {
+      if (pic.classList.contains(`deporte-${deporte}`)) {
+        pic.classList.remove('hidden');
+      } else {
+        pic.classList.add('hidden');
+      }
+    });
+  });
+});
 
 // function toggleMenu() {
 //     const nav = document.querySelector('nav');
