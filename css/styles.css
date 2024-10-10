@@ -263,7 +263,7 @@ footer {
 }
 
 #history p {
-  font-family: "Quicksand", sans-serif;
+    font-family: "Quicksand", sans-serif;
     text-align: justify;
     font-size: 1.1rem;
 }
@@ -275,6 +275,7 @@ footer {
     margin: 1rem 0;
     color: #ffffff;
 }
+
 #history h4 {
     font-family: "Roboto", sans-serif;
     font-weight: bold; /* Elimina la negrita */
@@ -282,7 +283,6 @@ footer {
     margin: 1rem 0;
     color: #ffffff;
 }
-
 
 .chapter-figure {
     margin: 1.5rem 0;
@@ -300,6 +300,7 @@ footer {
     color: #ddd;
     margin-top: 0.5rem;
 }
+
 /* Mantén este estilo para las imágenes pequeñas */
 .small-images-container {
     display: flex;
@@ -327,6 +328,7 @@ footer {
     display: block;
     margin: 0 auto; /* Asegura que la imagen se centre */
 }
+
 .small-centered-image {
     max-width: 20%; /* Reduce el tamaño de la imagen */
     height: auto;
@@ -337,6 +339,7 @@ footer {
 .center-image-container p {
     margin-top: 20px; /* Asegura que el texto tenga espacio por encima */
 }
+
 .smaller-image-container {
     display: block;
     text-align: center;
@@ -355,11 +358,58 @@ footer {
     margin-top: 20px;
 }
 
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    #history h2 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+    }
 
+    #history p {
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
+    }
 
+    #history h3 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+    }
+
+    #history h4 {
+        font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .small-images-container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra las imágenes */
+    }
+
+    .small-images-container .small-image {
+        width: 80%; /* Aumenta el tamaño de las imágenes pequeñas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    #history h2 {
+        font-size: 1.3rem; /* Tamaño de fuente más pequeño */
+    }
+
+    #history p {
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    }
+
+    #history h3 {
+        font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+    }
+
+    #history h4 {
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .small-images-container .small-image {
+        width: 90%; /* Más grande en pantallas muy pequeñas */
+    }
+}
 
 /* ===== Fin de Estilos para Historia ===== */
-/* Estilos generales para las instalaciones */
+
 #instalaciones {
     padding: 20px;
 
