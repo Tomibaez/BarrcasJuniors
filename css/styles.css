@@ -64,13 +64,7 @@ nav {
     padding: 0.5rem;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+
 
 nav ul li {
     margin: 0.5rem;
@@ -89,13 +83,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.menu-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white; /* Color de las líneas del ícono */
-    cursor: pointer;
-}
+
 
 .menu-btn:hover {
     color: lightgray; /* Cambia de color al hacer hover */
@@ -283,14 +271,14 @@ footer {
 #history h3 {
     font-family: "Roboto", sans-serif;/* Aplicar fuente Quicksand a los h3 */
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     margin: 1rem 0;
     color: #ffffff;
 }
 #history h4 {
     font-family: "Roboto", sans-serif;
-    font-weight: normal; /* Elimina la negrita */
-    font-size: 1.1rem; /* Tamaño de letra más pequeño */
+    font-weight: bold; /* Elimina la negrita */
+    font-size: 1.3rem; /* Tamaño de letra más pequeño */
     margin: 1rem 0;
     color: #ffffff;
 }
@@ -312,6 +300,63 @@ footer {
     color: #ddd;
     margin-top: 0.5rem;
 }
+/* Mantén este estilo para las imágenes pequeñas */
+.small-images-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.small-images-container .small-image {
+    width: 50%; /* Tamaño más pequeño solo para estas imágenes */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo para la imagen centrada, sin afectar a las demás */
+.center-image-container {
+    display: block; /* Cambiamos a block para asegurar que no esté en fila */
+    text-align: center; /* Centramos la imagen */
+    margin-bottom: 20px;
+}
+
+.center-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Asegura que la imagen se centre */
+}
+.small-centered-image {
+    max-width: 20%; /* Reduce el tamaño de la imagen */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Asegura que la imagen se centre */
+}
+
+.center-image-container p {
+    margin-top: 20px; /* Asegura que el texto tenga espacio por encima */
+}
+.smaller-image-container {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -40px; /* Ajusta este valor para subir el contenedor */
+}
+
+.smaller-image {
+    max-width: 20%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.smaller-image-container p {
+    margin-top: 20px;
+}
+
+
+
 
 /* ===== Fin de Estilos para Historia ===== */
 /* Estilos generales para las instalaciones */
@@ -407,6 +452,46 @@ iframe{
     color: #fff;
 }
 
+/* Estilos para el menú en versión normal */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Mostrar el menú normalmente en pantallas grandes */
+}
+
+/* Ocultar el menú cuando es responsive */
+nav ul.show {
+    display: block; /* Mostrar el menú cuando se hace clic en el botón hamburguesa */
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white; /* Color blanco permanente */
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block; /* Mostrar el botón hamburguesa en pantallas pequeñas */
+        background: none;
+        border: none;
+        font-size: 2rem; /* Ajusta el tamaño del ícono */
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none; /* Ocultar el menú en pantallas pequeñas */
+        flex-direction: column; /* Apilar los elementos en una columna */
+    }
+
+    nav ul.show {
+        display: flex; /* Mostrar el menú cuando se hace clic en el botón hamburguesa */
+    }
+}
 
 
 /* Responsivo: ajusta el tamaño del mapa en pantallas más pequeñas */

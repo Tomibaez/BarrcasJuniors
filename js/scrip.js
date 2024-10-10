@@ -1,7 +1,8 @@
 function toggleMenu() {
-    const menu = document.querySelector('nav ul');
-    menu.classList.toggle('show');
+  const menu = document.querySelector('nav ul');
+  menu.classList.toggle('show');
 }
+
 document.addEventListener('DOMContentLoaded', function() {
   // Selector de instalaciones
   const buttons = document.querySelectorAll('.deporte-selector button');

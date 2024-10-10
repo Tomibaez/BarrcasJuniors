@@ -8,26 +8,27 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="shortcut icon" href="/img/Logo.ico" type="image/x-icon">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <header>
     <div class="header-container">
         <img class="logo" src="/img/LOGO BARRACAS 2020 (1).png" alt="">
-        <button class="menu-btn" onclick="toggleMenu()" class="nav-responsive" id="icono-nav">&#9776;</button>
+        <button class="menu-btn" onclick="toggleMenu()" id="icono-nav">&#9776;</button>
         <nav class="nav" id="nav">
             <ul class="nav-list">
-                <li><a href="/html/inico.html#home" onclick="seleccionar()"><i class="bi bi-house-door-fill"></i></a></li>
+                <li><a href="/html/inico.html#home" onclick="seleccionar(this)"><i class="bi bi-house-door-fill"></i></a></li>
                 <li class="nav-item dropdown">
-                    <a href="/html/inico.html#actividades" id="actividadesLink" onclick="seleccionar()">Actividades</a>
+                    <a href="/html/inico.html#actividades" id="actividadesLink" onclick="seleccionar(this)">Actividades</a>
                 </li>
-                <li><a href="/html/inico.html#info" onclick="seleccionar()">Información</a></li>
-                <li><a href="/html/inico.html#history" onclick="seleccionar()">Historia</a></li>
-                <li><a href="/html/inico.html#contact" onclick="seleccionar()">Contacto</a></li>
+                <li><a href="/html/inico.html#info" onclick="seleccionar(this)">Información</a></li>
+                <li><a href="/html/inico.html#history" onclick="seleccionar(this)">Historia</a></li>
+                <li><a href="/html/inico.html#contact" onclick="seleccionar(this)">Contacto</a></li>
             </ul>
         </nav>
     </div>
 </header>
+
 
 <!-- <section id="home">
     <h2>Bienvenidos a Club Atlético Barracas Juniors</h2>
@@ -100,44 +101,36 @@
 </section> -->
 
 <section id="home">
-  <h2>Bienvenidos a Club Atlético Barracas Juniors</h2>
-    <p>El club con más pasión y dedicación en el barrio de Barracas.</p>
+  <h2>Club Atlético Barracas Juniors</h2>
+    <p>112 AÑOS JUNTO AL BARRIO.</p>
     <div class="carousel slide slider-box">
 <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="2000">
+    <div class="carousel-item active" data-bs-interval="4500">
       <img src="/img/Entrada.jpg" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
+    <div class="carousel-item" data-bs-interval="4500">
       <img src="/img/CanchaTenis1 (2).jpg" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
+    <div class="carousel-item" data-bs-interval="4500">
       <img src="/img/CanchaDeTenis2.jpg" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="/img/CanchaDePadel.jpg" class="d-block w-100" alt="...">
+    <div class="carousel-item" data-bs-interval="4500">
+      <img src="/img/padel.jpg" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+    <div class="carousel-item"  data-bs-interval="4500">
+      <img src="/img/Basquet.jpg" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+    <div class="carousel-item"  data-bs-interval="4500">
+      <img src="/img/GimnasioPb.jpg" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+    <div class="carousel-item"  data-bs-interval="4500">
+      <img src="/img/PrimerPiso.jpg" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+    <div class="carousel-item"  data-bs-interval="4500">
+      <img src="/img/garaje.jpg" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
+    
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -161,7 +154,7 @@
     <button data-deporte="sauna">Gimnasio 1er Piso</button>
     <button data-deporte="tenis">Cancha de Tenis</button>
     <button data-deporte="padel">Cancha de Padel</button>
-   
+    <button data-deporte="vestuarios">Vestuarios</button>
     <!-- Agrega más botones para otros deportes -->
   </div>
 
@@ -214,6 +207,15 @@
         <img src="/img/Canchadepadel2.jpg" class="instalaciones__img" alt="">
         <div class="instalaciones__overlay">Cancha de Padel</div>
       </figure>
+      <!--Vestuarios -->
+      <figure class="instalaciones__pic deporte-vestuarios hidden">
+        <img src="/img/vestuario1.jpg" class="instalaciones__img" alt="">
+        <div class="instalaciones__overlay">Vestuarios</div>
+      </figure>
+      <figure class="instalaciones__pic deporte-vestuarios hidden">
+        <img src="/img/vestuario2.jpg" class="instalaciones__img" alt="">
+        <div class="instalaciones__overlay">Vestuarios</div>
+      </figure>
     </div>
           
   </div>
@@ -225,58 +227,84 @@
   <h2>Nuestras Actividades</h2>
   <p>Ofrecemos una variedad de actividades deportivas y recreativas para todas las edades.</p>
   <div class="activities-container">
-    <a href="actividad1.html" class="activity-link">
-      <img src="/img/BasquetEquipo.jpg" alt="Descripción de la actividad" class="activity-image horizontal">
+    <a href="/html/basquet.html" class="activity-link">
+      <img src="/img/BasquetEquipo.jpg" alt="Escuelita De Basquet" class="activity-image horizontal">
       <p class="activity-name">Escuelita De Basquet</p>
       <div class="activity-title">Escuelita De Basquet</div>
     </a>
-    <a href="actividad2.html" class="activity-link">
-      <img src="/img/BaileUrbano.jpg" alt="Descripción de la actividad" class="activity-image vertical">
+    <a href="/html/baileUrbano.html" class="activity-link">
+      <img src="/img/BaileUrbano.jpg" alt="Baile Urbano" class="activity-image vertical">
       <p class="activity-name">Baile Urbano</p>
       <div class="activity-title">Baile Urbano</div>
     </a>
-    <a href="actividad3.html" class="activity-link">
-      <img src="/img/aikidoEquipo.jpg" alt="Descripción de la actividad" class="activity-image vertical">
+    <a href="/html/aikido.html" class="activity-link">
+      <img src="/img/aikidoEquipo.jpg" alt="Aikido" class="activity-image vertical">
       <p class="activity-name">Aikido</p>
       <div class="activity-title">Aikido</div>
     </a>
-    <a href="actividad4.html" class="activity-link">
-      <img src="/img/futbol escuela.png" alt="Descripción de la actividad" class="activity-image vertical">
+    <a href="/html/futbolFor.html" class="activity-link">
+      <img src="/img/Escuelitaf.png" alt="Escuelita De Futbol" class="activity-image horizontal">
       <p class="activity-name">Escuelita De Futbol</p>
       <div class="activity-title">Escuelita De Futbol</div>
     </a>
-    <a href="actividad5.html" class="activity-link">
-      <img src="/img/folckloreGrupo.jpg" alt="Descripción de la actividad" class="activity-image vertical">
+    <a href="/html/folklore.html" class="activity-link">
+      <img src="/img/folckloreGrupo.jpg" alt="Folcklore" class="activity-image vertical">
       <p class="activity-name">Folcklore</p>
       <div class="activity-title">Folcklore</div>
     </a>
-    <a href="actividad6.html" class="activity-link">
-      <img src="/img/futbolFemeninoEquipo.jpg" alt="Descripción de la actividad" class="activity-image vertical">
+    <a href="/html/futsalFem.html" class="activity-link">
+      <img src="/img/futbolFemeninoEquipo.jpg" alt="Futsal Femenino" class="activity-image vertical">
       <p class="activity-name">Futsal Femenino</p>
       <div class="activity-title">Futsal Femenino</div>
     </a>
-    <a href="actividad7.html" class="activity-link">
-      <img src="/img/taekwondo.png" alt="Descripción de la actividad" class="activity-image horizontal">
+    <a href="/html/taekwondo.html" class="activity-link">
+      <img src="/img/taekwondo.png" alt="Taekwondo" class="activity-image horizontal">
       <p class="activity-name">Taekwondo</p>
       <div class="activity-title">Taekwondo</div>
     </a>
-    <a href="actividad8.html" class="activity-link">
-      <img src="/img/futsalForm.jpg" alt="Descripción de la actividad" class="activity-image horizontal">
+    <a href="/html/futsalFor.html" class="activity-link">
+      <img src="/img/futsalForm.jpg" alt="Futsal Formativo" class="activity-image horizontal">
       <p class="activity-name">Futsal Formativo</p>
       <div class="activity-title">Futsal Formativo</div>
     </a>
-    <a href="actividad9.html" class="activity-link">
-      <img src="/img/tallerDeArte.jpeg" alt="Descripción de la actividad" class="activity-image horizontal">
+    <a href="/html/tallerDeArte.html" class="activity-link">
+      <img src="/img/tallerDeArte.jpeg" alt="Taller De Arte" class="activity-image horizontal">
       <p class="activity-name">Taller De Arte</p>
       <div class="activity-title">Taller De Arte</div>
     </a>
-    <a href="actividad9.html" class="activity-link">
-      <img src="/img/FutsalSeniorsEquipo.jpg" alt="Descripción de la actividad" class="activity-image horizontal">
+    <a href="/html/futsalSeniors.html" class="activity-link">
+      <img src="/img/FutsalSeniorsEquipo.jpg" alt="Futsal Seniors" class="activity-image horizontal">
       <p class="activity-name">Futsal Seniors</p>
       <div class="activity-title">Futsal Seniors</div>
     </a>
+    <a href="/html/rdc.html" class="activity-link">
+      <img src="/img/Rdc.jpg" alt="Rdc (Recreacion, deporte y capacitacion)" class="activity-image horizontal">
+      <p class="activity-name">Rdc (Recreacion, deporte y capacitacion)</p>
+      <div class="activity-title">Rdc (Recreacion, deporte y capacitacion)</div>
+    </a>
+    <a href="/html/handaballFemenino.html" class="activity-link">
+      <img src="/img/handball.png" alt="Handball Mayores" class="activity-image verical">
+      <p class="activity-name">Handball Mayores (femenino)</p>
+      <div class="activity-title">Handball Mayores (femenino)</div>
+    </a>
+    <a href="/html/handballEscuelita.html" class="activity-link">
+      <img src="/img/EscuelitaHandball.png" alt="" class="activity-image horizotal">
+      <p class="activity-name">Escuelita de Handball (femenino)</p>
+      <div class="activity-title">Escuelita de Handball (femenino)</div>
+    </a>
+    <a href="/html/hadballRecreativo.html" class="activity-link">
+      <img src="/img/hanballRecrepng.png" alt="" class="activity-image horizontal">
+      <p class="activity-name">Handball Recreativo</p>
+      <div class="activity-title">Handball Recreativo</div>
+    </a>
+    <a href="/html/zumba.html" class="activity-link">
+      <img src="/img/Zumba.jpeg" alt="Zumba" class="activity-image horizontal">
+      <p class="activity-name">Zumba</p>
+      <div class="activity-title">Zumba</div>
+    </a>
   </div>
 </section>
+
 <section id="info">
   <div class="container-info">
   <h2>Información</h2>
@@ -286,12 +314,12 @@
 </section>
 
 <section id="history">
-  <h2>Nuestra Historia</h2>
-  <p>Desde nuestra fundación en 1920, hemos sido un pilar en la comunidad de Barracas.</p>
+  <h2>Nuestra Historia</h1>
+ 
     <br><br>
-      <strong><h3>Capítulo I: EL PAÍS Y EL BARRIO EN 1912</h3></strong><br><br><br><h4>En memoria de Luis Amo; Dante González, Daniel "loco" González y Daniel "flauta" Martinez.</h4><br><br>
+     <h3>Capítulo I: EL PAÍS Y EL BARRIO EN 1912</h3><br><br><br><p>En memoria de: <br>Luis Amo <br>Dante González <br> Daniel "loco" González <br> Daniel "flauta" Martinez.</p><br><br>
       
-      <h4>Los sucesos que acaparaban la opinión pública en ese año eran la huelga ferroviaria, que había paralizado el país; el rompimiento de relaciones con Paraguay y el descubrimiento de las tenebrosas actividades de la mafia en Rosario.
+      <p>Los sucesos que acaparaban la opinión pública en ese año eran la huelga ferroviaria, que había paralizado el país; el rompimiento de relaciones con Paraguay y el descubrimiento de las tenebrosas actividades de la mafia en Rosario.
 
         También ese año marcó el derrumbamiento de la famosísima piedra movediza, que entristeció a toda la localidad de Tandil que la tenía por símbolo e icono turístico.
         
@@ -299,10 +327,10 @@
         
         El mundo político se aprestaba a ensayar por primera vez las elecciones generales bajo la ley Sáenz Peña con el sistema de lista incompleta; registrándose sangrientos episodios en la provincia de Córdoba.
         
-        Otros sucesos absorberían también la atención pública como la llegada de Amundsen, el explorador de la Antártico, los crímenes del tristemente célebre "Petiso Orejudo" y finalmente, durante el mes de abril, el trágico hundimiento del transatlántico Titanic que conmovería al mundo entero.</h4>
+        Otros sucesos absorberían también la atención pública como la llegada de Amundsen, el explorador de la Antártico, los crímenes del tristemente célebre "Petiso Orejudo" y finalmente, durante el mes de abril, el trágico hundimiento del transatlántico Titanic que conmovería al mundo entero.</p>
       <br><figure class="chapter-figure">
         <img src="/img/La barranca.jpg" alt="Descripción de la imagen" class="chapter-image">
-        <figcaption class="image-caption"><h3>"La barranca de la calle larga"</h3></figcaption>
+        <figcaption class="image-caption"><h4>"La barranca de la calle larga"</h4></figcaption>
       </figure><br><p>Y ya en nuestro barrio, podemos mencionar que en 1912 el Perito Francisco Pascasio Moreno, como Presidente del Consejo Escolar V decidió introducir el movimiento Scout en los colegios de Barracas, formándose en ese año la 3ra. Compañía de Barracas (hoy Tercera Compañía Scout Coronel Pringles).
 
       El renombrado paisajista Carlos Thays diseña el trazado de la actual Plaza España, lindera a los Hospitales y el Asilo de Ancianos Guillermo Rawson.
@@ -310,17 +338,325 @@
       También es el año en que el ilustre residente del barrio Agustin Bardi, compone su primer tango, "Vicentito".
       
       Por último y ya en el ámbito deportivo, digamos que fue campeón del torneo de 1912 por la Asociación Argentina de Football el equipo de Quilmas Athletic Club y por la Fe- deración Argentina de Football el equipo de Estudiantil Porteño.</p><br>
-      <figure class="chapter-figure"></figure>
-        <img src="/" alt="Descripción de la imagen" class="chapter-image">
-        <figcaption class="image-caption">La barranca de la larga calle</figcaption>
+      <figure class="chapter-figure">
+        <img src="/img/PuenteLaBoca.jpg" alt="Descripción de la imagen" class="chapter-image">
+        <figcaption class="image-caption"><h4>"Antiguo Puente Barracas-1915."</h4></figcaption>
       </figure><br>
       
-      <strong>Capítulo 2: La Expansión</strong><br>
-      Con el paso del tiempo, nuestro club creció, y con él, nuestras instalaciones. Desde los primeros torneos locales hasta competencias internacionales, hemos sido parte de momentos inolvidables.
-      Las paredes de nuestro club son testigos de hazañas deportivas, de encuentros de amistad, y de sueños realizados.
+      <h3>Capítulo 2:  ORÍGENES DEL CLUB</h3><br>
+     
+
+      <p>Recordamos a José "tano" Espósito: Alberto "petiso" Asprea y Tarcisio Casagrande</p>
+      
+      <p>Fue un grupo de muchachos los que reunidos en un negocio de lecheria de la calle Patricios 1893, casi esquina Daniel Cerri, fundaron el 31 de Julio de 1912 el Club Atlético Barracas Juniors, que con el tiempo sería referente obligado de toda actividad cultural y deportiva que se desarrollara en el barrio.
+      
+      Integraron la primera Comisión Directiva: Antonio Benvenuto (Presidente), Mariano Tadich (Socio N°1), José Fogieta, Tobias Trini, Juan Pisani, Gaspar Visco, Antonio Tadich, Mario García López, José Líñeiro, Francisco Raffo, Pedro Corvan, Jorge Tadich, José Garcia, José Freire, Ernesto Lopez y Domingo Arbo.</p>
+      <div class="chapter-figure-container small-images-container">
+        <figure class="chapter-figure">
+            <img src="/img/Socio.jpg" alt="Descripción de la imagen" class="small-image">
+            <figcaption class="image-caption"><h4>"Mariano Tadich (Socio Nro 1°)"</h4></figcaption>
+        </figure>
+        <figure class="chapter-figure">
+            <img src="/img/presidente.jpg" alt="Descripción de la imagen" class="small-image">
+            <figcaption class="image-caption"><h4>"Antonio Tadich (Presidente)"</h4></figcaption>
+        </figure>
+    </div>
+      
+      <p>También colaboraron en esos lejanos inicios Alfredo Pazo, Esteban Burlando, Juan Neira, José Gil, Ovidio Schopeto y tantos otros nombres que quedaron en el olvido.
+      
+      El mismo lugar de la fundación sirvió en los primeros años como sede de la nueva entidad, hasta que los señores Márquez y González, comerciantes de la zona, cedieron un ambiente de su negocio de despensa sito en la esquina Noroeste de Patricios e Iriarte. Con posterioridad se alquila un pequeño local en la esquina Noroeste de Patricios y Rio Cuarto Las sedes iniciales fueron las nombradas hasta el año 1923, aunque el Club se había ampliado con un "field" para la práctica de fútbol ubicado en la Avenida Vélez Sársfield,
+      
+      hacia el oeste, entre Río Cuarto y Santo Domingo</p>
+      <p>Fue en ese año 1923 que la continua ampliación de actividades obligó a las entonces autoridades del Club a alquilar un inmueble que brindara mayores del barrio.
+        <br><br>
+        La propiedad que se alquila y que seria la nueva sede del Club consta de tres habita ciones y una azotea, donde estaba ubicada en la calle posteriormente se ubicó un ring para la práctica de boxeo Iriarte 1342.
+        <br><br>
+        En 1933 se muda a la que seria su nueva sede social y deportiva, dos casas tipo chorizo con un frente de 14 metros, pero con un fondo de 104 metros, lo que permitiria desarrolla las múltiples actividades que su intersección con Azara ubicada en la calle Rio Cuarto 1400, en su interseccion con Azara.
+        <br><br>
+        El 30 de octubre de 1934 se produce un hecho trascendental para la vida del Club al resolver la Comisión Directiva presidida entonces por el señor Enrique Liñeiro, (también árbitro de fütbol) adquirir al Banco Hipotecario Nacional la propiedad que se ocupaba en la suma de $ 50.200 moneda nacional.
+        </p>
       <br><br>
-      <strong>Capítulo 3: El Futuro</strong><br>
-      Hoy, miramos hacia el futuro con optimismo, orgullosos de nuestro legado y decididos a continuar escribiendo nuevas historias. Sabemos que el deporte une, inspira y transforma, y eso es lo que queremos seguir ofreciendo a las nuevas generaciones.
+      <div class="smaller-image-container">
+        <figure >
+          <img src="/img/Dibujo.jpg" alt="Descripción de la imagen" class="smaller-image">
+          <figcaption class="image-caption"></figcaption>
+        </figure>
+        <p>Es interesante destacar que por carecer en ese entonces la Institución de Personería Jurídica, la compra se hizo a nombre de dos asociados, Teófilo Barrangou y Antonio Tadich.</p>
+      </div>
+      <br>
+      <p>La Personeria Jurídica seria otorgada en 1948, bajo la presidencia del señor Alfredo o por Decreto 39,966 y el 19 de octubre de 1949, habiéndose cancelado la hipoteca se ritura la propiedad a nombre del Club. Allí funcionó hasta el año 2001.
+
+        Es justicia destacar la actuación de dos presidentes, uno en la década del 50, Carlos glese quien también fue destacado dirigente de la Asociación del Básquetbol y otro la del 60, Osvaldo De Gouvea en cuya gestión se inauguró el Gimnasio cubierto que cisamente llevó el nombre de Carlos Anglese.</p>
+        <figure class="chapter-figure">
+          <img src="/img/juntada.jpg" alt="Descripción de la imagen" class="chapter-image">
+          <figcaption class="image-caption"><h4></h4></figcaption>
+        </figure>
+        
+       <p>A partir de 1982 y aprovechando los terrenos que habian quedado remanentes de la traza de la nueva Autopista se comienza a solicitar la concesión del uso del terreno ubicado entre las calles Iriarte, California y la linea imaginaria de la calle Hornos.
+        
+        El Presidente del Club en aquellos tiempos, Baltazar Radetic conjuntamente con los Sres. Rodolfo Valdez, Leonardo Minervini y Ricardo Castorina son quienes consiguen, tras largas reuniones y presentaciones ante el Intendente Municipal Sr. Julio César Saguier la autorización para comenzar a realizar trabajos en el predio, aunque aún no se había promulgado la Ordenanza pertinente. Corria el año 1985.
+        
+        El Maestro Mayor de Obras Roberto Lanzillotta y el Ing. Ricardo Castorina se encar- gan del proyecto para la construcción de canchas de tenis, confiteria, vestuarios y playón polideportivo, que permitiria ampliaciones permanentes.
+        
+        Con la ayuda de subsidios por parte de la Municipalidad de la Ciudad de Buenos Aires y de la Sub-Secretaria de Deportes de la Nación, entre 1987 y 1989 se concluyen lascanchas de tenis, se incorporan canchas de paddle y se efectiviza la iluminación de las mismas.</p>
+        <figure class="chapter-figure">
+          <img src="/img/juntadaCanchaTenisjpg.jpg" alt="Descripción de la imagen" class="chapter-image">
+          <figcaption class="image-caption"><h4></h4></figcaption>
+        </figure>
+
+        <p>Inauguración canchas de tenis
+        
+        Concejal Aldo Curra: P. Ingegnieri, B. Radetic, C. Castorina; L. Minervini, A. Asprea O. Olivari; H. Corrieri, R. Castorina, F. Sostegno y A. Euredjian.
+        
+        Con la venta de la vieja sede de la calle Rio Cuarto, efectivizada en el año 2000, se
+        
+        concluyen las obras de construcción de la Secretaria del Club, acceso a la Sede Social y
+        
+        un Salón de eventos en la planta alta durante el año 2001.
+        
+        Ya en el año 2007 se inaugura un moderno gimnasio polideportivo y que merced a una donación del ex Presidente Baltasar Radetic se logra techar, constituyendo hoy un orgullo del barrio.
+        
+        La cesión del predio se fue renovando por parte de la Municipalidad (hoy Gobierno Autónomo) a medida que iba venciendo. En principio por 5 años, luego por 10 años, hasta que la Legislatura otorgó una prórroga de 20 años a través de la Ley 1042, a partir del 1" de Enero del 2002.
+        
+        El Club fue simbolo y orientación del barrio por décadas. Sus deportistas lo prestigia ron, sus dirigentes lo enaltecieron y hoy en su moderna sede de Gral. Hornos 1850 trata denodadamente de no sucumbir ante los inconvenientes y continuar con la trayectoria brillante que signó sus 100 años de vida.</p>
+        <br>
+        <figure class="chapter-figure">
+          <img src="/img/clubAtletico.jpg" alt="Descripción de la imagen" class="chapter-image">
+          <figcaption class="image-caption"><h4>Frente de la Sede Social Rio IV 1400.</h4></figcaption>
+        </figure>
+        <figure class="chapter-figure">
+          <img src="/img/gimnsasioBaltazar.jpg" alt="Descripción de la imagen" class="chapter-image">
+          <figcaption class="image-caption"><h4>Inauguración del gimnasio cerrado. Homenaje al amigo y dirigente B. Radetic (Baldo)..</h4></figcaption>
+        </figure>
+        <figure class="chapter-figure">
+          <img src="/img/apartadoDeTelevison.jpg" alt="Descripción de la imagen" class="chapter-image">
+          <figcaption class="image-caption"><h4>Primer apartado de television en el Club - 1959.</h4></figcaption>
+        </figure>
+        <figure class="chapter-figure">
+          <img src="/img/reunionSocial.jpg" alt="Descripción de la imagen" class="chapter-image">
+          <figcaption class="image-caption"><h4>Reunion Social - 1959.</h4></figcaption>
+        </figure>
+        <figure class="chapter-figure">
+          <img src="/img/rencuentro.jpg" alt="Descripción de la imagen" class="chapter-image">
+          <figcaption class="image-caption"><h4>Reencuentro: <br>
+
+            Rubén Ralmjak, Roberto Leiro, Juan Carlos Nano, Juan Carlos Campos, Perico de Gouvea, Oscar Olivari y Ricardo Delgado.
+            </h4></figcaption>
+        </figure>
+               <h4>Ultimos Presidentes</h4>
+               <div class="chapter-figure-container small-images-container">
+                <figure class="chapter-figure">
+                    <img src="/img/julio.jpg" alt="Descripción de la imagen" class="small-image">
+                    <figcaption class="image-caption"><h4>Julio Valdez</h4></figcaption>
+                </figure>
+                <figure class="chapter-figure">
+                    <img src="/img/baltazar.jpg" alt="Descripción de la imagen" class="small-image">
+                    <figcaption class="image-caption"><h4>Baltazar Radetic</h4></figcaption>
+                </figure>
+                <figure class="chapter-figure">
+                  <img src="/img/santiago.jpg" alt="Descripción de la imagen" class="small-image">
+                  <figcaption class="image-caption"><h4>Santiago Lanzillota</h4></figcaption>
+              </figure>
+              <figure class="chapter-figure">
+                <img src="/img/ricardo.jpg" alt="Descripción de la imagen" class="small-image">
+                <figcaption class="image-caption"><h4>Ricardo Castorina</h4></figcaption>
+             </figure>
+            </div>
+            <figure class="chapter-figure">
+              <img src="/img/integrantes.jpg" alt="Descripción de la imagen" class="chapter-image">
+              <figcaption class="image-caption"><h4>Integrantes de Comisión Directiva 2011/2013.
+
+                Parados (Izq. a Der) H. Lomanto; S. Lanzillotta; H. Corrieri.
+                
+                Sentados (Izq, a Der) V. Menga; L. Kwiatkowski; R. Castorina; J. Valdez; R. Lanzillotta</h4></figcaption>
+            </figure>
+      <strong>Capítulo III: El Futobl</strong><br><br>
+     <p>Dedicado a Alberto "hoco" Brignardello, Rogelio Co- rrva y Abel Belledi</p>
+     <br><br>
+     <p>Se inscribe en la Asociación Amateur Argentina de Fútbol en 1913 y comienza a jugar en la drvisión intermedia, lo que hoy seria una conjunción de las divisiones B, C y D Eran mas de 50 Instituciones las que se dividian en secciones.
+
+      Los ganadores de las secciones se enfrentaban posteriormente en partidos eliminato- rios hasta llegar a coronar un campeón que ascendia a Primera División, donde ya jugaban Boca Juniors, River Plate, Racing y nuestros vecinos de Sportivo Barracas entre otros.
+      
+      El trabajo incansable para atraer los jóvenes ve cumplido su objetivo en el año de 1927 al coronarse campeón de cuarta división de la Zona Sud. Fueron sus jóvenes integrantes Arditti, Martellotti y Cerviño, Arbo, Brevia y Alonso, Facio, Ugarte, Martinez, Francese y Beraldi.
+      
+      Con la base de aquella cuarta división se fue formando el equipo que en 1930 juega y pierde la final del torneo de ascenso.
+      
+      Al año siguiente, 1931, el equipo se refuerza deportivamente en pos de conseguir su gran ambición de ascender a Primera División.
+      <figure class="chapter-figure">
+        <img src="/img/futbolV.jpg" alt="Descripción de la imagen" class="chapter-image">
+        <figcaption class="image-caption"><h4>Equipo de 1916.
+
+          Parados: P. Franchino, E. Luppoli, A. Crone, E. Cherico, J. Corti, A. Tadich. Sentados: J. Bernard, A. Simonelli, J. Cortabarria, E. Malisardi, A. Cloria.</h4></figcaption>
+      </figure>fi
+      </p>
+      <p>Asi es que se surma al plantel Atonio Cerros, ya en el final de su carrera, provenien de El Pervenir y consagrado en Boca Juniors
+
+        Delantero, ganó 7 titulos (Campeonatos 1923, 1924, 1926. Copa de Honor Cusenie 1920. Copa Ibarguren 1923 y 1924 y Copa Estimalo 1926) Integro el equipo que hizo
+        
+        gira por Europa con Boca Juniors, en la que salió segundo goleador. Jagó 3 parodos en la Selección Argentina, debutando nada menos que con Brasilety
+        
+        de diciembre de 1923 (2-0).
+        
+        Surgado de las inferiores de Boca, su verdadero nombre era Antonio Cerrotta. Habil
+        
+        doso y gamheteador, leta muy bien el juego. Se desempeñó en varios puestos de ataque y
+        
+        uno de sus fuertes era el cabezazo.
+        
+        Así, marcando de cabeza, entró en la historia como el pruner argentino en marcar un gol en Europa, el 5 de marzo de 1925 ante Celta de Vigo.
+        
+        Lo apodaron Carbunin por ser vendedor ambulante de carbón. </p>
+        <br><br>
+        <div class="smaller-image-container">
+          <figure >
+            <img src="/img/antonioCerrotti.jpg" alt="Descripción de la imagen" class="smaller-image">
+            <figcaption class="image-caption"><h4>Antonio Cerrotti.</h4></figcaption>
+          </figure>
+      
+        </div>
+       
+        <p>El equipo alincaba a Brusco, Barrosa y Piñeyro, Cagnotti, López y Palombo, Oliva, Facio, Cerrotu, Francese y Mastropiero
+
+          Realizan un magnifico torneo y juegan la final contra La Paternal, en cancha de River Plate el 27 de abril, perdiendo 3 a 0 y resignando por segunda vez consecutiva el ansiado ascenso a Primera División. 
+          <br><br>
+          <div class="smaller-image-container">
+            <figure >
+              <img src="/img/JuanM.jpg" alt="Descripción de la imagen" class="smaller-image">
+              <figcaption class="image-caption"><h4>Juan M. Ugarte Capitán e Insider derecho de la 4ta. División Club Atlético Barracas Juniors 1930.</h4></figcaption>
+            </figure>
+        
+          </div>
+          
+          
+          <p>
+          El 20 de febrero de 1932, por unanimidad la Comisión Directiva del Club decide ret rar de competencia a su equipo de fútbol de Primera División con el propósito de mant nerse al margen del profesionalismo y haciendo votos por el deporte amateur.
+          
+          De esa forma mantiene las divisiones menores hasta 1940, cuando se entrega el prec
+          
+          que se alquilaba en la Av. Vélez Sársfield entre Rio Cuarto y Sto. Domingo y finaliza u
+          
+          actividad que se reactivaria décadas después con la llegada del Fútbol de Salón.
+          
+          De todas maneras, fueron 27 años de competencia en un deporte popular, con el ce curso de jugadores que luego fueron figuras como Roberto Cherro.</p>
+          <br><br>
+          <figure class="chapter-figure">
+            <img src="/img/Equipo4ta.jpg" alt="Descripción de la imagen" class="chapter-image">
+            <figcaption class="image-caption"><h4>Equipo de 4ta. División de Barracas Juniors. 1930.
+            </h4></figcaption>
+          </figure>
+        </p>
+        <p>Esta leyenda del fútbol argentino nació en 1907 en Barracas. Por aquel entonces su apellido se escribía Cerro, sin hache. Con el tiempo, la pronunciación italiana le agregó una letra más.
+
+          Se inició en el fútbol en Sportivo Barracas y a los 17 años debutó frente a Porteño. Luego de pasar transitoriamente por Ferro y Barracas Juniors, desembarcó en Boca Juniors dispuesto a dar el gran salto hacia delante.
+          
+          Es así que a partir de 1926 este joven goleador quedaría en la historia del club xeneize. Roberto Cherro, sumando los goles que hizo en el amateurismo y en la era profesional logró 212 tantos.
+          
+          De esta manera fue el máximo artillero de la institución de la ribera hasta el año pa- sado en que fue superado por Martín Palermo.</p><br><br>
+          <div class="smaller-image-container">
+            <figure >
+              <img src="/img/RobertoCherro.jpg" alt="Descripción de la imagen" class="smaller-image">
+              <figcaption class="image-caption"><h4>Roberto Cherro.</h4></figcaption>
+            </figure>
+        
+          </div>
+          <figure class="chapter-figure"></figure>
+            <img src="/img/EquipoItermedio.jpg" alt="Descripción de la imagen" class="chapter-image">
+            <figcaption class="image-caption"></figcaption>
+          </figure> <br><br>
+          <h3>CAPÍTULO IV FÚTBOL DE SALÓN O FÚTBOL 5</h3><br><br> 
+          <p>En memoria de Héctor "Dr." Belledi, Octavio "cacho" Gil y Edelmiro Barreiro
+
+            Este es un ciclo deportivo atípico, por el poco tiempo en que se implementó su práctica en el Club y los éxitos deportivos conseguidos.
+            <br><br>
+            
+            A mediados de 1982 se comienza con las clases vinculadas a este deporte con chicos
+            
+            de 8 a 12 años. Cabe destacar la participación de Mauro Boselli, vecino del barrio, poste-
+            
+            riormente consagrado en Boca Juniors y Estudiantes de La Plata y con paso por el fútbol
+            
+            europeo en Inglaterra (Wigan) y en Italia (Genoa).
+            <br><br>
+            
+            Ya a fines de ese año y con mucho entusiasmo los más pequeños se miden con el Club Boca Juniors en un partido amistoso donde pierden 11 a 1.
+            <br><br>
+            
+            Curiosamente, el hecho más importante del partido fue haber convertido ese solitario gol. Eso les dio el impulso para continuar trabajando para, al cabo de dos años, tomarse la ansiada revancha.
+            <br><br>
+            
+            El comienzo fue la participación en los campeonatos organizados por la Liga de Fútbol Infantil para luego pasar a competir en la Asociación de Fútbol de Salón, donde en 1983 ya se participa con divisiones inferiores.
+            <br><br>
+            
+            Para el siguiente año se inscriben los equipos de mayores y el debut se produce en un cuadrangular organizado por Boca Juniors en el que participan, además del equipo local, Racing Club, River Plate y Barracas Juniors.
+            <br><br>
+            
+            El torneo se gana invicto y fue la primera fiesta con un titular del diario Crónica que en su parte deportiva publicaba una foto del equipo con el titulo "Barracazo en la Boca".
+            <br><br>
+            
+            Comenzado el torneo oficial de 1984, el equipo volvió a ser protagonista y con una férrea disciplina en la preparación fisica a cargo de la profesora Alba Guerra y la Dirección Técnica de Rodolfo Valdez, sumado a la indiscutible calidad de los jugadores, se accede a la final del torneo donde derrota a Sociedad Hebraica 4 a 3.
+            <br><br>
+            
+            Para el año 1985 crece la cantidad de jugadores y se pueden completar los planteles de Reserva y Primera. Son 48 los jóvenes que lo conforman.
+            <br><br>
+            El desarrollo del campeonato fue similar al del año anterior y no se tuvo inconvenien- tes para clasificar por segundo año consecutivo a la final del torneo, esta vez ante Platensc a quien derrota en el final del partido por 2 a 1.</p>
+            <figure class="chapter-figure">
+              <img src="/img/futsalCampeon.jpg" alt="Descripción de la imagen" class="chapter-image">
+              <figcaption class="image-caption"><h4>Fueron los bicampeones: Aldo Ottaggio (Goma). Enrique Pirrello (Kiko), Vicente Simone (Pollo), Obdulio Borghetti (Sopa). Hugo Hidalgo (Zurdo), Francisco Stama (Chichin), Luis Montenegro, Juan Manrique (Paquito), Carlos Zaccaro (Lázaro), Juan Mansilla (Mono), Rubén Arguen, Fabián Montenegro, Armando Aguilera (Chueco) y Director Técnico Rodolfo Valdez (Fito)</h4></figcaption>
+            </figure>
+            <h3>CAPÍTULO IV FÚTBOL DE SALÓN O FÚTBOL 5</h3><br><br> 
+            <p>Recordamos a Amadeo Villalonga Juan Lenticchia y Salvador Delgado
+
+              Con la desaparición del fútbol como deporte competitivo del Club, el basketball se erige en el gran protagonista a partir de 1936.
+              
+              Todos los chicos del barrio pugnaban por participar en las divisiones inferiores, lo que llevó a efectuar clases prácticas hasta altas horas de la noche. Fue propulsor de esa actividad Roberto Gambedotti.
+              
+              Inicialmente el básquetbol en la ciudad de Buenos Aires estaba regido por una sola entidad, la Federación Argentina, cuyo comienzo de actividades fue en 1921.
+              
+              Quince años más tarde, se produce una escisión y hasta 1973 la actividad es maneja- da por dos entidades, la Federación Argentina (Asociación Porteña a partir de 1954) y la Asociación del Básquetbol de Buenos Aires.
+              
+              El 12 de julio de 1974 se fusionan las dos Asociaciones, dando asi inicio a la Federa ción Regional de Básquetbol de la Capital Federal.
+              
+              Como miembro fundador de la Asociación Argentina de Basketball Barracas Juniors fue un animador constante de los torneos.
+              
+              El 10 de enero de 1950 consigue el ascenso a Primera División, tras derrotar en el partido final a Liberal de Nueva Chicago por 32 a 27. Integraron el equipo Alberto Cobiela, Horacio Fábregas, Héctor Camiño, Héctor Scala, José Matias Dos Santos, Roberto Leiro, Edmundo Mesa Brennan, Francisco Cánepa, Aurelio Díaz, Salvador Castronuovo, Horacio Grandjean y como Director Técnico Alfredo Grandjean.
+              
+              Hubo un sinnúmero de jugadores que se destacaron en todas las épocas. En la década del 50, además de los arriba mencionados, cabe destacar a Victorio Marasso, proveniente del Club Terremoto y de muy lucida actuación lo que lo llevó luego a pasar a Boca Juniors el Ing. Kulzer y los hermanos Rodriguez.
+              
+              En los 60 Ricardo Garbarino, Alberto Marchetti, Ricardo Delgado, Oscar Olivar Rubén Ralmjak, Jorge Belmonte, Luis Rodríguez, Pedro Pisano, Enrique Barbieri, Jua Carlos Campos, Baltazar Radetic, Santiago Lanzilotta, Carlos Andrioli, Miguel A. Ga giulo, Carlos Lutteral, Pablo Niggi, Coco Garcia, Héctor Belledi, Ramiro Lukoff Cama (Bianco) y los hermanos Martinoli.
+              
+              Juan Carlos Nano, Edmundo Patzke, Jorge Belmonte, Héctor Camiño, Alberto M chetti y Julio Valdez se destacaron especialmente y fueron convocados a integrar seleccionados de Capital Federal e inclusive nacionales.</p>
+              <figure class="chapter-figure">
+                <img src="/img/equiponr1.jpg" alt="Descripción de la imagen" class="chapter-image">
+                <figcaption class="image-caption"><h4>Campeón Categoria Cadetes -1951. Martinez - Belledi-Niggi - Montero - Coco Garcia-L.M. Garcia Rodriguez - Casti- llo-Campus-Dasso-Patzke-Lukoff Camaño - Delgado.
+                </h4></figcaption>
+              </figure>
+              <figure class="chapter-figure">
+                <img src="/img/equipo2basjpg.jpg" alt="Descripción de la imagen" class="chapter-image">
+                <figcaption class="image-caption"><h4>
+                  Campeón División Reserva - 1956. noli-Campos-Barbieri - Nano-Andino - Zambiase-Minoli- Pisano - Olivari - Delgado.</h4></figcaption>
+              </figure>
+              <p>También es destacable mencionar la presencia de León Najnudel, creador de la Liga Nacional de Basketball, integrando los equipos de la Institución y del Técnico que llevó al equipo a todas las conquistas logradas, Abelardo Dasso,
+
+                Ambos fueron técnicos de los seleccionados metropolitanos y nacionales.
+                
+                Como logros destacados de esta actividad deportiva podemos mencionar los cam peonatos obtenidos por las divisiones de Infantiles (1954), Cadetes (1951 y 1955), Cuarta (1957), Quinta (1954) y Reserva (1956)
+                
+                La obtención en 1959 de las copas Alonso (Sporting de Wilde), Independiente de Avellaneda e Independiente de Burzaco.
+                <figure class="chapter-figure">
+                  <img src="/img/Campeon4tadivision.jpg" alt="Descripción de la imagen" class="chapter-image">
+                  <figcaption class="image-caption"><h4>
+                    Campeón 4ta. División - 1957.</h4></figcaption>
+                </figure>
+
+                
+                <p>
+                
+                El inolvidable triunfo sobre el quinteto del Racing Club que integraban los olimpicos Pérez Varela, Uder, Contarbio, Poletti y Menini que cayeron en la mitica cancha de la calle Rio Cuarto ante el impetu de dos juveniles como Juan Carlos Nano y Rogelio Alvarez que revirtieron un abultado score.
+                
+                Dirigia a Racing Club Abelardo Dasso y a Barracas Juniors Aurelio Diaz.
+                
+                Y por último, pero no menos importante, el tercer puesto obtenido en el Torneo Me- tropolitano de 1962 que reunia a los tres mejores equipos de la Asociación del Basketball (Boca Jrs, River Plate y Barracas Jrs) y los tres mejores de la Federación de basketball (Gimnasia y Esgrima de Villa del Parque, Palermo y Comunicaciones)</p>
+
   
 </section>
 
