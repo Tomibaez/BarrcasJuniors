@@ -611,3 +611,22 @@ nav ul.show {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }
+
+/* Ajuste del tamaño de la imagen de los profesores */
+/* Ajuste del tamaño y alineación de la imagen de los profesores */
+#professors {
+    text-align: center; /* Centra el contenido dentro de la sección */
+}
+
+#professors img {
+    width: 100%;
+    max-width: 300px; /* Limita el tamaño máximo de la imagen */
+    height: auto;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Alineación del título de los profesores */
+#professors h3 {
+    text-align: center; /* Centra el texto del título */
+    margin-top: 20px; /* Espacio adicional arriba del título */
+}
